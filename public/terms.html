@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+
+  <link rel="icon" href="/wp-content/uploads/2019/04/cropped-ms-icon-310x310-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" sizes="57x57" href="logo/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="logo/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="logo/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="logo/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="logo/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="logo/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="logo/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="logo/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="logo/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="logo/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="logo/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="logo/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  <link rel="stylesheet" href="./css/notyf.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/dashboard.css?v=1.0">
+  <script src="./js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-storage.js"></script>
+  <script type="text/javascript" src="./js/firebase_init.js"></script>
+  <script src="./js/uikit-icons.min.js" ></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5cd1f2bdd07d7e0c639267a6/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137827565-2');
+</script>
+
+  <style type="text/css">
+    .reportCard{
+      background-color: #f8f9fe;
+    }
+    article{
+      /*-webkit-user-select: none;*/ /* Safari */        
+      /*-moz-user-select: none;*/ /* Firefox */
+      /*-ms-user-select: none;*/ /* IE10+/Edge */
+      /*user-select: none;*/ /* Standard */
+      color: #666 !important;
+
+    }
+    img.vert-move {
+      -webkit-animation: mover 1s infinite  alternate;
+      animation: mover 1s infinite  alternate;
+    }
+    img.vert-move {
+      -webkit-animation: mover 1s infinite  alternate;
+      animation: mover 1s infinite  alternate;
+    }
+    @-webkit-keyframes mover {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    @keyframes mover {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    #nav-top{
+
+      float:right;
+
+    }
+
+    #sidebar{
+      top:0px;
+      max-width:15% !important;
+    }
+    .nav-shrink{
+      margin-left: 15% !important;
+
+    }
+    .uk-button-primary{
+      background-color:#4054be !important;
+    }
+    .horizontal-center{
+      margin-top: 50vh;
+    }
+    .floating {  
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      width:30px;
+    }
+
+    @keyframes floating {
+      from { transform: translate(0,  0px); }
+      65%  { transform: translate(0, 15px); }
+      to   { transform: translate(0, -0px); }    
+    }
+    #my-id > .uk-modal-dialog{
+      height:100vh;
+      top: -10px;
+      overflow: hidden;
+
+    }
+    .pre-load{
+      height: 100%;
+      width: 100%;
+      z-index: 999999;
+      position: absolute;
+    }
+    #proCard{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  </style>
+  <script type="text/javascript">
+  </script>
+  <script>
+
+    UIkit.util.ready(function(){
+      var loadValue = 10;
+      var animate = setInterval(function () {
+
+        loadValue += 10;
+
+        switch(true){
+          case loadValue <= 30:
+          jQuery('#loadingInfo').text('Loading Page Content...');
+          break;
+          case loadValue <= 50 && loadValue > 30:
+          jQuery('#loadingInfo').text('Securing Connection...');
+          break;
+          case loadValue > 50 && loadValue <= 100:
+          jQuery('#loadingInfo').text('Rendering Data...');
+          break;
+        }
+
+        jQuery('#js-loading').val(loadValue);
+
+        if (loadValue >= 100) {
+          clearInterval(animate);
+          $('main').removeClass('uk-hidden');
+          $('.pre-load').addClass('uk-animation-slide-bottom uk-hidden');
+          var confirmState = false;
+
+        }
+
+      }, 200);
+
+    });
+    var currentUser
+    firebase.auth().onAuthStateChanged(function(user){
+      if(user){
+        currentUser = firebase.auth().currentUser;
+        
+        $('.profile-img').attr("src","" + currentUser.photoURL);
+        $('.user-name').text(currentUser.displayName);
+        $('.name-upload').attr("placeholder", currentUser.displayName);
+      }else{
+        $('#left-col').hide();
+      }
+    });
+
+
+
+  </script>
+</head>
+<body>
+  <div class="pre-load uk-inline uk-animation-reverse">
+    <div class="uk-position-center uk-overlay">
+      <img class="floating uk-align-center" style="width:100px;" src="./images/logo.png">
+      <progress id="js-loading" class="uk-progress" value="10" max="100"></progress>
+      <h4 class="uk-h4">Welcome to Terrifio&trade;!</h4>
+      <p id="loadingInfo">Loading Please Wait...</p>
+    </div>
+  </div>
+  <main class="uk-hidden">
+    <!--HEADER-->
+    <header id="top-head" class="uk-position-fixed uk-hidden">
+      <div style="min-height:50px;" class="uk-container uk-container-expand uk-background-primary">
+        <nav class="uk-navbar uk-light" data-uk-navbar="mode:click; duration: 250">
+          <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-hidden@m">
+              <a class="uk-logo" href="/"><img class="custom-logo" src="./images/logo.png" alt=""></a> 
+            </div>
+            <ul class="uk-navbar-nav uk-visible@m">
+              <li>
+                <a href="#">Settings <span data-uk-icon="icon: triangle-down"></span></a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-nav-header">Your Account</li>
+                    <!-- <li><a href="#"><span data-uk-icon="icon: info"></span> Summary</a></li> -->
+                    <li><a href="/account"><span data-uk-icon="icon: settings"></span> Settings</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="/user"><span data-uk-icon="icon: image"></span> Your Profile</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a onClick="firebase.auth().signOut();"><span data-uk-icon="icon: sign-out"></span> Logout</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+<!--             <div class="uk-navbar-item">
+              <a href="/digitalipadvisor"><button  class="uk-button uk-button-default">
+                New Project
+              </button></a>
+            </div> -->
+            <div class="uk-navbar-item uk-visible@s">
+              <!-- <form class="uk-search uk-search-default">
+                <span data-uk-search-icon></span>
+                <input class="uk-search-input search-field" type="search" placeholder="Search">
+              </digitalipadvisor> -->
+            </div>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li class="uk-visible@m"><a href="/user" data-uk-icon="icon:user" title="Your profile" data-uk-tooltip></a></li>
+              <li class="uk-visible@m"><a href="/account" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
+              <li class="uk-visible@m"><a onClick="logout();" data-uk-icon="icon:  sign-out" title="Sign Out" data-uk-tooltip></a></li>
+              <li><a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #left-col; cls: uk-visible@m" data-uk-navbar-toggle-icon title="Menu" data-uk-tooltip></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--/HEADER-->
+    <!-- LEFT BAR -->
+    <aside id="left-col" class="uk-light uk-visible@m">
+      <div class="left-logo uk-align-center uk-flex uk-flex-middle">
+        <a href="/"><img class="custom-logo" src="./images/logo.png" alt=""></a>
+        <h4 class="uk-h4" style="padding-bottom: 15px;">Terrifio &trade;</h4>
+      </div>
+      <div class="left-content-box  content-box-dark">
+        <a href="/user">
+          <img src="" alt="" class="uk-border-circle profile-img">
+        </a>
+        
+        <h4 class="uk-text-center uk-margin-remove-vertical text-light"></h4>
+        
+        <div class="uk-position-relative uk-text-center uk-display-block">
+          <a href="#" class="uk-text-small uk-text-muted user-name uk-display-block uk-text-center" data-uk-icon="icon: triangle-down; ratio: 0.7">User</a>
+          <!-- user dropdown -->
+          <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+            <ul class="uk-nav uk-dropdown-nav uk-text-left">
+              <li><a href="/account"><span data-uk-icon="icon: settings"></span> Settings</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="/user"><span data-uk-icon="icon: image"></span> Your Profile</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a onClick="firebase.auth().signOut();"><span data-uk-icon="icon: sign-out"></span> Logout</a></li>
+            </ul>
+          </div>
+          <!-- /user dropdown -->
+        </div>
+      </div>
+      
+      <div class="left-nav-wrap">
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+          <li class="uk-nav-header">ACTIONS</li>
+          <li><a href="/"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Dashboard</a></li>
+          <li><a href="/calculator"><span data-uk-icon="icon: credit-card" class="uk-margin-small-right"></span>Cost Forecaster</a></li>
+<!--           <li><a class="uk-disabled" title="Coming Soon" href="#"><span data-uk-icon="icon: calendar" class="uk-margin-small-right"></span>Calendar</a>
+          </li> -->
+<!--          
+          <li><a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Featured Content</a></li>
+          <li><a href="#"><span data-uk-icon="icon: lifesaver" class="uk-margin-small-right"></span>Tips</a></li> -->
+          <li class="uk-parent">
+            <a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>Info</a>
+            <ul class="uk-nav-sub">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="left-content-box uk-margin-top">
+        </div>
+        
+      </div>
+      <div class="bar-bottom">
+        <ul class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5" data-uk-grid>
+          <li>
+            <a href="/" class="uk-icon-link" data-uk-icon="icon: home" title="Home" data-uk-tooltip></a>
+          </li>
+          <li>
+            <a href="/account" class="uk-icon-link" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a>
+          </li>
+          <!-- <li>
+            <a href="#" class="uk-icon-link" data-uk-icon="icon: social"  title="Social" data-uk-tooltip></a>
+          </li> -->
+          
+          <li>
+            <a onClick="firebase.auth().signOut();" class="uk-icon-link" data-uk-tooltip="Sign out" data-uk-icon="icon: sign-out"></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- /LEFT BAR -->
+    <script type="text/javascript">
+     function deleteReport(reportSuffix, reportPrefix, formName){
+      var reportID = String(reportPrefix) + String(reportSuffix);
+      console.log(reportPrefix)
+      if(confirm('Are you sure you wish to delete '+ formName + '?') == true){
+       var parent = database.ref('user/' + userID+'/'+reportID);
+       parent.on('child_removed', function (snapshot) {
+        console.log(snapshot);
+      })
+       parent.remove();
+     } 
+
+
+
+
+   }
+ </script>
+ <link href="/wp-content/themes/uikit-dashboard-theme/datedropper/datedropper.css" rel="stylesheet" type="text/css" />
+ <script src="/wp-content/themes/uikit-dashboard-theme/datedropper/datedropper.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="./css/datepicker.css">
+ <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+
+ <!-- CONTENT -->
+ <div id="content" class="uk-background-cover uk-overlay uk-overlay-cover uk-overlay-default " style="background-image: url('./images/background.jpg')" data-uk-height-viewport="expand: true">
+  <div class="uk-container uk-container-expand">
+    <hr>
+    <div class="uk-grid uk-grid-medium" data-uk-grid>
+
+      <!-- panel -->
+      <div class="uk-width-2-3@l uk-align-center">
+        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+          <div class="uk-card-header">
+            <div class="uk-grid uk-grid-small">
+              <div class="uk-width-auto"><h4>Terms & Conditions</h4></div>
+              <div class="uk-width-expand uk-text-right panel-icons">
+                    <!-- <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
+                      <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a> -->
+                      <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: cross"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-card-body">
+                  <article class="uk-article">
+                    <h1 class="uk-article-title">Terms & Conditions</h1>
+                    <p>
+                      User Terms:
+                    </p>
+                    <ol>
+                      <li>
+                        <p>
+                          The following terms govern your use as an Intellectual Property
+                          (“IP”) Creator or Inventor user (collectively you or “Inventor
+                          User”) of https// terrifio.co.uk including the Terrifio™ Digital IP
+                          Advisor (the “Platform”). The Platform is operated by MILTON BOWES
+                          LIMITED, Company Number 11975862, of International House, 24
+                          Holborn Viaduct, London EC1A 2BN, United Kingdom, trading as
+                          TERRIFIO UK. (By “TERRIFIO”, “we”, and “our”, we mean TERRIFIO UK,
+                          and affiliated entities) We interpret your use of the Platform as
+                          evidence that you accept and agree to all of these terms. You must
+                          be 18 years of age or older to use the Platform. If at any time you
+                          do not agree to all of these terms, you must terminate your access
+                          to the Platform and, if applicable, cancel your subscription, at
+                          which time all further access to or use of the Platform or its
+                          content is not permitted. These terms include our Privacy Policy
+                          which you will find at https//:platform.terrifio.co.uk/privacy. The
+                          Platform grants you a limited, revocable, nonexclusive,
+                          non-sublicensable, license to access and use of functions, and
+                          content generated by the Platform, in whole or in part, including
+                          but not limited to our intellectual property therein, solely for
+                          your own use
+                        </p>
+                        <ol type="a">
+                          <li>
+                            <p>
+                              Confidential Information: The Platform stores data (and
+                              meta data) aggregated from your actions.
+                            </p>
+                            <ol type="i">
+                              <li>
+                                <p>
+                                  <a name="_GoBack"></a>
+                                  Under the “New Project” button, you answer
+                                  questions relating to your New Project. The
+                                  Platform provides a “Name” field for you to insert
+                                  a generally descriptive term, in 24 characters or
+                                  less. The Platform urges you not to reveal any
+                                  confidential features of your New Project. The
+                                  Platform provides a field for you to identify your
+                                  country and a general subject area (type) relating
+                                  to your New Project.
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  The Platform then asks you several general
+                                  questions about your activities with your New
+                                  Project, and the date(s) of the earliest of such
+                                  activities. The Platform asks about these dates
+                                  because they may have a bearing on your IP
+                                  protection strategy and, more particularly, may
+                                  indicate if you need to act quickly to seek the
+                                  advice of an IP Professional to confirm deadlines
+                                  arising from your activities. If you provide
+                                  incorrect dates then this may lead to irrevocable
+                                  loss of rights, for which the Platform takes no
+                                  responsibility. The Platform does not do anything
+                                  to validate or verify these dates. Once you
+                                  complete the questions, the Platform stores data
+                                  representing your answers and prepares a Report
+                                  which is conditioned on (i.e. it includes clauses
+                                  that are added according to) your answers, and in
+                                  some cases including possible deadlines as
+                                  discussed below. Your answers and the Report will
+                                  be available to you in your Dashboard (the “Project
+                                  Information”).
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  The Platform uses an algorithmic method for making
+                                  general calculations of possible deadlines for
+                                  taking actions in relation to your New Project. If
+                                  you answer questions incorrectly, then the possible
+                                  deadlines may be calculated incorrectly and the
+                                  Platform is not responsible for any consequences
+                                  arising from such incorrect calculations.
+                                  <strong>
+                                    Be aware that your failure to act promptly to
+                                    have an IP Professional verify possible
+                                    deadlines and to act by such verified deadlines
+                                    may result in the loss of IP rights that might
+                                    otherwise have been available to you.
+                                  </strong>
+                                  <strong>The Platform</strong>
+                                  <strong>
+                                    urges you to seek the advice of an IP
+                                    Professional, either by connecting with one via
+                                    the Platform, or by connecting with an IP
+                                    Professional that you identify independently of
+                                    the Platform, to confirm the calculations of
+                                    possible deadlines.
+                                  </strong>
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  Under the “How do I Connect with an IP
+                                  Professional” button, The Platform asks you general
+                                  questions concerning you and your New Project,
+                                  including your zip/postal/post code, and a budget
+                                  range (the “IP Professional Search Information”).
+                                </p>
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                    <ol>
+                      <ol type="a" start="2">
+                        <li>
+                          <p>
+                            No Warranty: The Platform uses industry standard encryption as
+                            provided by current internet protocols for the transmission of
+                            data over the internet, and to encrypt stored data as provided
+                            by our server service providers. Further details may be
+                            available at
+                            <u>
+                              <a
+                              href="https://cloud.google.com/security/encryption-at-rest/default-encryption/"
+                              >
+                              https://cloud.google.com/security/encryption-at-rest/default-encryption/
+                            </a>
+                          </u>
+                          . However, we cannot guarantee confidentiality. For instance,
+                          loss of confidentially can sometimes arise from actions beyond
+                          our control, such as the unauthorized access of a password of
+                          an Inventor User or an IP Professional User, or defects in
+                          cryptoalgorithms or cryptosystems.. Administrators of the
+                          Platform may have access to at least some of your Project
+                          Information, your Professional Search Information and your user
+                          account information. Security breaches can sometimes arise when
+                          computers and software used by Inventor Users or IP
+                          Professional Users are not regularly kept up to date. We do not
+                          warrant against any disruptions, malicious third party attacks
+                          or other events that may lead to the exposure, loss or
+                          inaccessibility of some or all of the Project Information,
+                          including all or part of the data of your Project Information,
+                          the IP Professional Search Information, user account
+                          information and any additional related meta data. We recommend
+                          that you maintain a current backup of all information you enter
+                          or otherwise store on the Platform.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="3">
+                      <li>
+                        <p>
+                          IP Professional Users: The Platform may provide you with links
+                          to, or otherwise connect you with, IP Professionals who
+                          register as such on the Platform, for example by notifying them
+                          to contact you, or vice versa. While we believe such IP
+                          Professional Users to be competent to practice in the field of
+                          Intellectual Property, we provide no warranty whatsoever as to
+                          the fitness, quality, cost or timeliness of the work product of
+                          any such IP Professional User. The Platform does not identify
+                          any form of certification or specialization associated with any
+                          such IP Professional User, and cannot vouch for the licensure
+                          or status of such licensure for any such IP Professional User.                <strong> </strong> The Platform merely networks Inventor Users
+                          with IP Professional Users. You accept the sole responsibility
+                          to verify the credentials of any such IP Professional User, and
+                          to not engage any such IP Professional User who does not meet
+                          your requirements. You may find a link for registered patent
+                          attorneys or patent agents at the website of your national
+                          Patent Office. For instance, publically available information
+                          may be provided on the page for the U.S. Patent Office, Office
+                          of Enrollment and Discipline. You may also find a relevant
+                          state attorney registration and disciplinary commission site
+                          for any such IP Professional User. We accept no responsibility
+                          to participate or to assist in resolving any disputes between
+                          you and any such IP Professional User, for example in relation
+                          to the scope of work they carry out or the fees that they
+                          charge (see below).
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="4">
+                      <li>
+                        <p>
+                          Payment: The Platform may provide a payment processing gateway
+                          (“Payment Gateway”) and may charge a subscription fee
+                          (“Subscription Fee”) or other fee for Inventor Users and IP
+                          Professional Users to have access to the Platform, and/or for
+                          the service of linking an Inventor User with an IP Professional
+                          User. Should you retain an IP Professional User as a result of
+                          a link by the Platform (a “Linked IP Professional User”), you
+                          will be liable for all IP Professional charges issued by the
+                          Linked IP Professional User (“Linked IP Professional Charge”).
+                          Each Linked IP Professional Charge will be based on a fixed
+                          price estimate, or a variable price estimate provided by the
+                          Linked IP Professional User for IP legal or IP agency services,
+                          as determined by the scope of work they carry out, plus a
+                          platform service fee (“Platform Service Fee”), which may be
+                          based on a percentage of the IP Professional Charge or a fixed
+                          rate charge. You will be liable to the IP Professional User for
+                          payment of the Linked IP Professional Charge, and to the
+                          Platform for the payment of the Platform Service Fee. If the
+                          Platform collects the IP Professional Charge, the Platform will
+                          forward it to the IP Professional User.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="5">
+                      <li>
+                        <p>
+                          IP Services: The Platform does not offer the services of an IP
+                          Professional User<strong>.</strong> No attorney-client or
+                          agent-client relationship is created between you and the
+                          Platform. Answering questions, sending information to, or
+                          receiving information from, the Platform does not establish an
+                          attorney-client or agent-client relationship. The Platform is
+                          not a party to any attorney- client or agent-client
+                          relationship that may arise between you and an IP Professional
+                          User you may retain, either through the Platform through any
+                          actions we may take in respect of an IP Professional User, or
+                          for that matter an IP Professional that you find independently
+                          of the Platform. The Platform has no control over any of the
+                          actions of any such IP Professional User or Inventor User, and
+                          is not responsible for the actions of either IP Professional
+                          Users or Inventor Users. The Platform does not “share fees”
+                          with any IP Professional User, and does not receive a referral
+                          fee or commissions based on Linked IP Professional Charges or
+                          other charges issued by an IP Professional User. The
+                          information you provide to the Platform leads to part of the
+                          written record of your New Project and may not be protected by
+                          any form of legal privilege. The Platform, via the Project
+                          Report, provides you with<strong> </strong>general information
+                          that is assembled according to conditions based on your answers
+                          (“Conditioned”) in relation to your New Project. The term
+                          “Advisor” in Digital IP Advisor is used only to refer to
+                          general information provided in the Project Report and other
+                          information provided by the Platform, including provision of
+                          possible deadlines based on the information you submit.
+                          However, as stated above, note that we do not verify such
+                          deadlines and cannot be held responsible for any errors in such
+                          deadlines or any loss of IP rights if you fail to act by a
+                          relevant deadline.                <strong>We strongly recommend that you </strong>
+                          <strong>
+                            seek the advice of an IP Professional to confirm the
+                            calculations of possible deadlines and to finalize plans to
+                            pursue IP rights for your New
+                          </strong>
+                          <strong> Project.</strong>
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="6">
+                      <li>
+                        <p>
+                          Deleting Data: If you wish to delete your Project Information
+                          and, if applicable IP Professional Search Information, you can
+                          do so by selecting the ‘trash can’ icon beside the New Project
+                          button in your Dashboard. Once deleted, your Project
+                          Information and, if applicable IP Professional Search
+                          Information, is not recoverable, except as noted below. If you
+                          wish to delete your account, you may do so from the account
+                          preferences section [
+                          <u>
+                            <a href="https://platform.terrifio.co.uk/account">
+                              https://platform.terrifio.co.uk/account
+                            </a>
+                          </u>
+                          ]. Termination of your user account, all application data, user
+                          data and account settings (“Account Information”) will be
+                          deleted and not recoverable, using industry standard recovery
+                          tools. However, we cannot necessarily rule out the possibility
+                          of data being recovered utilizing current or future forensic
+                          technologies. In some cases, meta information may be stored
+                          about your usage of software under this domain.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="7">
+                      <li>
+                        <p>
+                          Consent to disclose Project Information, IP Professional Search
+                          Information and/or Account Information: In order for us connect
+                          you with IP Professional Users, we need to provide them with
+                          information about you and your New Project. By using our “How
+                          do I find an Professional?” function, you consent to some or
+                          all of your Project Information, IP Professional Search
+                          Information and Account Information to be accessible or made
+                          visible to IP Professional Users. By uploading content to the
+                          Platform, you grant us a licence to use, store and copy that
+                          content and to make it available to third parties in accordance
+                          with these terms.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="8">
+                      <li>
+                        <p>
+                          Use of the Platform: You agree that you will use the Platform
+                          in good faith and for its intended purpose and you will not
+                          misuse or cause damage of any kind to the Platform or any of
+                          its other users, or to data stored therein, nor will you
+                          perform any act that contravenes any laws or that infringes any
+                          third party rights, or as a cover for learning the acts of any
+                          other users.<strong> </strong>You also agree to the Acceptable
+                          Use policy set out at Annex 1 to these terms. We have the right
+                          to remove any content that you upload to the Platform if, in
+                          our sole opinion, such content does not comply with our
+                          Acceptable Use policy or contravenes this term.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="9">
+                      <li>
+                        <p>
+                          Limitation of Liability, Termination of Service: You agree that
+                          in no event shall the Platform be liable to you, or any party
+                          directly or indirectly associated with you, whether the claim
+                          be in contract, tort or any other cause of action, for an
+                          amount in excess of any fees you have paid to the Platform, or
+                          $150 whichever is less, in the six months prior to your
+                          termination of service. We exclude all implied conditions,
+                          warranties, representations or other terms that may apply to
+                          our Platform or any content on it. We will not be liable to you
+                          for any loss or damage, whether in contract, tort (including
+                          negligence), breach of statutory duty, or otherwise, even if
+                          foreseeable, arising under or in connection with your:
+                        </p>
+                      </li>
+
+                      <ol type="i">
+                        <ol type="a">
+                          <ol type="i">
+                            <ol type="i">
+                              <li>
+                                <p>
+                                  use of, or inability to use, our Platform; or
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  use of or reliance on any content generated by on our
+                                  Platform.
+                                </p>
+                              </li>
+                            </ol>
+                          </ol>
+                        </ol>
+                      </ol>
+                      <p>
+                        We shall under no circumstances be liable for any loss of profits, business
+                        interruption, loss of data, loss of earnings, cost-savings, opportunities
+                        foregone, losses resulting from disruption to business, or any indirect or
+                        consequential loss or damage.
+                      </p>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="10">
+                      <li>
+                        <p>
+                          Our Rights: We reserve the right at our sole discretion to
+                          remove Account Information, Project Information and IP
+                          Professional Search Information, or any other information in
+                          relation to your Profile or your New Project(s), or to
+                          terminate your account in its entirety, for any reason
+                          whatsoever, including to satisfy a Regulatory requirement, or
+                          to otherwise comply with a Regulatory Authority. We do not
+                          guarantee that the Platform, or any content on it, will always
+                          be available or be uninterrupted. We may suspend or withdraw or
+                          restrict the availability of all or any part of the Platform
+                          for business and operational reasons at any time.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="11">
+                      <li>
+                        <p>
+                          Subject to change: Except where prohibited by applicable law,
+                          we reserve the right to change these Terms in any way, at any
+                          time, and without notice. Your continued access to or use of
+                          the Platform after any changes to these Terms of Use indicates
+                          your acceptance of such changes.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="12">
+                      <li>
+                        <p>
+                          <a name="ORIGHIT_18"></a>
+                          <a name="HIT_18"></a>
+                          <a name="ORIGHIT_19"></a>
+                          <a name="HIT_19"></a>
+                          <a name="ORIGHIT_17"></a>
+                          <a name="HIT_17"></a>
+                          Governing Law and Jurisdiction: This Agreement and any dispute
+                          or claim arising out of, or in connection with, it, its subject
+                          matter or formation (including non-contractual disputes or
+                          claims) shall be governed by, and interpreted and construed in
+                          accordance with, the laws of Ontario and the laws of Canada
+                          applicable therein. You irrevocably and unconditionally agree
+                          that the courts of Ontario shall have exclusive jurisdiction
+                          over any dispute or claim arising out of, or in connection
+                          with, this Agreement, its subject matter or formation
+                          (including non-contractual disputes or claims).
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="13">
+                      <li>
+                        <p>
+                          This document contains the entire agreement between us with
+                          respect to the subject matter hereof. Any failure to enforce
+                          any provision of this agreement shall not constitute a waiver
+                          thereof or of any other provision.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="14">
+                      <li>
+                        <p>
+                          You acknowledge that you have placed no reliance on any
+                          representation made but not set out expressly in these Terms.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="15">
+                      <li>
+                        <p>
+                          You may not assign, transfer or sub-contract any of your rights
+                          under the Terms without our prior written consent.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="16">
+                      <li>
+                        <p>
+                          We may assign, transfer or sub-contract all or any of our
+                          rights at any time without consent.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="17">
+                      <li>
+                        <p>
+                          You agree to indemnify us for any and all claims or legal
+                          proceedings that may be brought against it and for any loss or
+                          damage suffered or incurred as a result of your breach of these
+                          Terms.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="18">
+                      <li>
+                        <p>
+                          You acknowledge that your use of the Platform confers no right
+                          to you to outsource, rent, repackage, or re-brand the Platform,
+                          or to alter any presentation of the Platform or to add
+                          advertising or any other association of any other entity with
+                          the platform, or alter or remove any trademark and copyright
+                          notices thereon, or to present the Platform any way whatsoever.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <ol>
+                    <ol type="a" start="19">
+                      <li>
+                        <p>
+                          All content included on, and the compilation of the Platform is
+                          protected by copyright. We reserve all rights to such
+                          copyright. Any other use, including the reproduction,
+                          modification, distribution, transmission, republication,
+                          display, or performance, of the content on the Platform is
+                          strictly prohibited. You may not copy reproduce, modify,
+                          publish, distribute, transmit, transfer or create derivative
+                          works from the content, nor any portion thereof, without first
+                          obtaining our written permission.
+                        </p>
+                      </li>
+                    </ol>
+                  </ol>
+                  <p>
+                    Last updated June 6, 2019
+                  </p>
+                  <p>
+                    Annex 1 – Acceptable Use Policy
+                  </p>
+                  <ol>
+                    <li>
+                      <p>
+                        You may not upload any material during the course of your use of
+                        the Platform that:
+                      </p>
+                    </li>
+                  </ol>
+                  <ol type="a">
+                    <li>
+                      <p>
+                        infringes any copyright, database right or trade mark of any other
+                        person;
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        breaches any legal duty owed to a third party, such as a
+                        contractual duty or a duty of confidence;
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        is unlawful, harmful, threatening, defamatory, obscene, infringing,
+                        harassing or racially or ethnically offensive;
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        facilitates illegal activity;
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        depicts sexually explicit images;
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        promotes unlawful violence;
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        is discriminatory based on race, gender, colour, religious belief,
+                        sexual orientation, disability; or
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        is otherwise illegal or causes damage or injury to any person or
+                        property.
+                      </p>
+                    </li>
+                  </ol>
+                  <ol start="2">
+                    <li>
+                      <p>
+                        You are responsible for configuring your information technology,
+                        computer programmes and devices to access our Platform. You should
+                        use your own virus protection software. You must not misuse our
+                        Platform or website by knowingly introducing viruses, trojans,
+                        worms, logic bombs or other material that is malicious or
+                        technologically harmful. You must not attempt to gain unauthorised
+                        access to our website, the server on which our Platform is stored
+                        or any server, computer or database connected to our website or
+                        Platform. You must not attack our website via a denial-of-service
+                        attack or a distributed denial-of service attack. By breaching this
+                        provision, you would commit a criminal offence under the Computer
+                        Misuse Act 1990. We will report any such breach to the relevant law
+                        enforcement authorities and we will co-operate with those
+                        authorities by disclosing your identity to them. In the event of
+                        such a breach, your right to use our Platform will cease
+                        immediately.
+                      </p>
+                    </li>
+                  </ol>
+                  <ol start="3">
+                    <li>
+                      <p>
+                        You may not:
+                      </p>
+                    </li>
+                  </ol>
+                  <ol type="a">
+                    <li>
+                      <p>
+                        except as may be allowed by any applicable law which is incapable
+                        of exclusion by agreement between us and except to the extent
+                        expressly permitted under the User Terms:
+                      </p>
+                    </li>
+                  </ol>
+                  <p>
+                    (i) attempt to copy, modify, duplicate, create derivative works from,
+                    frame, mirror, republish, download, display, transmit, or distribute all or
+                    any portion of any materials published on or software comprised in the
+                    Platform in any form or media or by any means; or
+                  </p>
+                  <p>
+                    (ii) attempt to de-compile, reverse compile, disassemble, reverse engineer
+                    or otherwise reduce to human-perceivable form all or any part of any
+                    software comprised in the Platform;
+                  </p>
+                  <ol type="a" start="2">
+                    <li>
+                      <p>
+                        access all or any part of the Platform in order to build a product
+                        or service which competes with the Platform; or
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        use the Platform to provide services to third parties; or
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        assist third parties in obtaining access to the Platform.
+                      </p>
+                    </li>
+                  </ol>
+                  <ol start="4">
+                    <li>
+                      <p>
+                        You must use all reasonable endeavours to prevent any unauthorised
+                        access to, or use of, the Platform and, in the event of any such
+                        unauthorised access or use, promptly notify us.
+                      </p>
+                    </li>
+                  </ol>
+                  <ol start="5">
+                    <li>
+                      <p>
+                        If you choose, or we provide you with, a user identification code,
+                        password or any other piece of information as part of our security
+                        procedures, you must treat such information as confidential. You
+                        must not disclose it to any third party.
+                      </p>
+                    </li>
+                  </ol>
+                  <ol start="6">
+                    <li>
+                      <p>
+                        We have the right to disable any user identification code or
+                        password, whether chosen by you or allocated by us, at any time, if
+                        in our reasonable opinion you have failed to comply with any of the
+                        provisions of these Acceptable Use Policy.
+                      </p>
+                    </li>
+                  </ol>
+                This policy is effective as of 7 June 2019.</p>
+              </article>
+            </div>
+
+          </div>
+        </div>
+        <!-- /panel -->
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="uk-section uk-section-xsmall" style="background-color: rgba(0,0,0,0.15)">
+    <div class="uk-container">
+      <div class="uk-grid uk-child-width-1-2@s uk-text-center uk-grid-stack" data-uk-grid="">
+        <div class="uk-text-small uk-text-muted uk-first-column uk-align-center">
+          <a href="https://terrifio.co.uk">Copyright 2019 Terrifio &trade; All Rights Reserved.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Load More Javascript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js" integrity="sha256-UGwvyUFH6Qqn0PSyQVw4q3vIX0wV1miKTracNJzAWPc=" crossorigin="anonymous"></script> -->
+  <script type="text/javascript">
+    
+  </script>
+  <!-- OFFCANVAS -->
+    <!-- <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+      <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+        <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+        
+      </div>
+    </div> -->
+    <!-- /OFFCANVAS -->
+    
+    <!-- JS FILES -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!--    <script src="./js/chartScripts.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js" integrity="sha256-rqEXy4JTnKZom8mLVQpvni3QHbynfjPmPxQVsPZgmJY=" crossorigin="anonymous"></script>
+    <script src="./js/notyf.min.js"></script>
+    <!-- Required Overall Script -->
+<!-- <script src="./js/script.js"></script>
+--><!-- Status Updater -->
+<script src="./js/status.js"></script>
+<!-- Sample Charts -->
+<!-- <script src="./js/charts.js"></script> -->
+<!-- Sample Notifications -->
+<!-- <script src="./js/notification.js"></script> -->
+
+</main>
+</body>
+</html>

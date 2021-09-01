@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Terrifio</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Clean and responsive administration panel">
+  <meta name="keywords" content="Admin,Panel,HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Erik Campobadal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="logo/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="logo/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="logo/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="logo/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="logo/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="logo/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="logo/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="logo/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="logo/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="logo/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="logo/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="logo/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./css/uikit.min.css" />
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/notyf.min.css" />
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script src="js/uikit.min.js" ></script>
+  <script src="js/uikit-icons.min.js" ></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137827565-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137827565-2');
+</script>
+<!-- Hotjar Tracking Code for https://platform.terrifio.co.uk -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1428836,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
+<body>
+  <div uk-sticky="media: 960" class="uk-navbar-container tm-navbar-container uk-sticky uk-active" style="position: fixed; top: 0px; width: 1903px;">
+    <div class="uk-container uk-container-expand">
+      <nav uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="#" class="uk-navbar-item uk-logo">
+            Terrifio&trade;
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="content-background">
+    <div class="uk-section-large">
+      <div class="uk-container uk-container-large">
+        <div uk-grid class="uk-grid-collapse uk-grid-match uk-child-width-1-1@s uk-child-width-1-4@l">
+          <div></div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <h1 class="uk-heading-primary uk-text-middle">Login</h1>
+              Welcome to Terrifio&trade; Please login to continue.
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-primary uk-card-body" style="background-color: #4054be !important">
+
+              <fieldset id="reset" class="uk-fieldset uk-hidden">
+                <div class="uk-margin"> 
+                  <input type="email" id="emailReset" onChange="$('#emailReset').removeClass('uk-form-danger');"class="uk-input"  placeholder="Email Address" name="emailReset">
+                </div>
+                <div class="uk-margin">
+                  <button onClick="resetPassword($('#emailReset').val());" class="uk-button uk-button-default">Reset Password</button>
+                </div>
+              </fieldset>
+
+              <fieldset id="login" class="uk-fieldset">
+
+               <div class="uk-margin"> 
+                <input type="email" id="email" class="uk-input"  placeholder="Email Address" name="email">
+              </div>
+
+              <div class="uk-margin">
+                <input type="password" class="uk-input" placeholder="Enter Your Password" id="password" name="password">
+              </div>
+              <div class="uk-margin">
+                <button onClick="signIn($('#email').val(), $('#password').val())" id="signInButton" class="uk-button uk-button-default">Login</button>
+              </div>
+            </fieldset>
+            <a href="/register">Don't have an account? Sign up here.</a>
+            <div class="uk-margin">
+              <a href="#" onClick="$('#login').addClass('uk-hidden'); $('#reset').removeClass('uk-hidden');">Forgot your password?</a></div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/firebase_init.js"></script>
+  <script type="text/javascript">
+    if (typeof config === 'undefined') {
+      var config = {
+        apiKey: "AIzaSyA5rZfAgaCirhIJktpvDpO5MTQKlhZXMrg",
+        authDomain: "patentdepot.firebaseapp.com",
+        databaseURL: "https://patentdepot.firebaseio.com",
+        projectId: "patentdepot",
+        storageBucket: "patentdepot.appspot.com",
+        messagingSenderId: "1085689362352"
+      };
+      firebase.initializeApp(config);
+      var database = firebase.database();
+    } 
+
+    $("#password").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#signInButton").click();
+    }
+});
+
+    function resetPassword(email){
+      var auth = firebase.auth();
+      var emailAddress = email;
+
+      auth.sendPasswordResetEmail(emailAddress).then(function() {
+       UIkit.notification('Password recovery sent to email', {status:'success'});
+     }).catch(function(error) {
+      UIkit.notification('Password recovery failed: ' + error.codes, {status:'danger'});
+    });
+   }
+
+   signIn = (email, password) => {
+    event.preventDefault();
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+  .then(function() {
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
+    // ...
+    // New sign-in will be persisted with session persistence.
+    return     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+      UIkit.notification('Login Failed: ' + error.code, {status:'danger'});
+      // ...
+    });
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
+
+  }
+
+  //Check if the user is authed and redirect to dash
+  $(document).ready(() => {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        firebase.database().ref('/user/' + user.uid + '/userMeta').once('value').then(function(snapshot){
+     if (snapshot.val().role != 'pro'){
+        var cid = getQueryVariable('cid');
+        if(typeof cid !== 'undefined' && cid != null && cid != ""){
+          firebase.database().ref('/user/'+ user.uid + '/userMeta').on('value', function(snapshot){
+           
+            if(typeof snapshot.val().cid === 'undefined')
+              firebase.database().ref('/user/'+ user.uid + '/userMeta').update({'cid':cid}).then(function(){
+                
+              });
+            });
+        }
+      }
+    });
+        window.location.href = ('/');
+      } else {
+
+      }
+    });
+  });
+  signInProvider = (provider) => {
+    if (provider == 'facebook'){
+
+    }else if (provider == 'google'){
+      var provider = new firebase.auth.GoogleAuthProvider();
+    }
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      $('loginError').toggleClass('invisible');
+      $('loginError').toggleClass('visible');
+      console.log(errorCode);
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+  }
+
+
+</script>
+</body>
+</html>

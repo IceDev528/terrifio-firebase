@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+
+  <link rel="icon" href="/wp-content/uploads/2019/04/cropped-ms-icon-310x310-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" sizes="57x57" href="logo/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="logo/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="logo/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="logo/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="logo/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="logo/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="logo/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="logo/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="logo/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="logo/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="logo/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="logo/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  <link rel="stylesheet" href="./css/notyf.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/dashboard.css?v=1.0">
+  <script src="./js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-storage.js"></script>
+  <script type="text/javascript" src="./js/firebase_init.js"></script>
+  <script src="./js/uikit-icons.min.js" ></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5cd1f2bdd07d7e0c639267a6/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137827565-2');
+</script>
+
+  <style type="text/css">
+    .reportCard{
+      background-color: #f8f9fe;
+    }
+    article{
+      /*-webkit-user-select: none;*/ /* Safari */        
+      /*-moz-user-select: none;*/ /* Firefox */
+      /*-ms-user-select: none;*/ /* IE10+/Edge */
+      /*user-select: none;*/ /* Standard */
+      color: #666 !important;
+
+    }
+    img.vert-move {
+      -webkit-animation: mover 1s infinite  alternate;
+      animation: mover 1s infinite  alternate;
+    }
+    img.vert-move {
+      -webkit-animation: mover 1s infinite  alternate;
+      animation: mover 1s infinite  alternate;
+    }
+    @-webkit-keyframes mover {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    @keyframes mover {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    #nav-top{
+
+      float:right;
+
+    }
+
+    #sidebar{
+      top:0px;
+      max-width:15% !important;
+    }
+    .nav-shrink{
+      margin-left: 15% !important;
+
+    }
+    .uk-button-primary{
+      background-color:#4054be !important;
+    }
+    .horizontal-center{
+      margin-top: 50vh;
+    }
+    .floating {  
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      width:30px;
+    }
+
+    @keyframes floating {
+      from { transform: translate(0,  0px); }
+      65%  { transform: translate(0, 15px); }
+      to   { transform: translate(0, -0px); }    
+    }
+    #my-id > .uk-modal-dialog{
+      height:100vh;
+      top: -10px;
+      overflow: hidden;
+
+    }
+    .pre-load{
+      height: 100%;
+      width: 100%;
+      z-index: 999999;
+      position: absolute;
+    }
+    #proCard{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  </style>
+  <script type="text/javascript">
+  </script>
+  <script>
+
+    UIkit.util.ready(function(){
+      var loadValue = 10;
+      var animate = setInterval(function () {
+
+        loadValue += 10;
+
+        switch(true){
+          case loadValue <= 30:
+          jQuery('#loadingInfo').text('Loading Page Content...');
+          break;
+          case loadValue <= 50 && loadValue > 30:
+          jQuery('#loadingInfo').text('Securing Connection...');
+          break;
+          case loadValue > 50 && loadValue <= 100:
+          jQuery('#loadingInfo').text('Rendering Data...');
+          break;
+        }
+
+        jQuery('#js-loading').val(loadValue);
+
+        if (loadValue >= 100) {
+          clearInterval(animate);
+          $('main').removeClass('uk-hidden');
+          $('.pre-load').addClass('uk-animation-slide-bottom uk-hidden');
+          var confirmState = false;
+
+        }
+
+      }, 200);
+
+    });
+    var currentUser
+    var reportID 
+    firebase.auth().onAuthStateChanged(function(user){
+      if(user){
+        currentUser = firebase.auth().currentUser;
+        
+        $('.profile-img').attr("src","" + currentUser.photoURL);
+        $('.user-name').text(currentUser.displayName);
+        $('.name-upload').attr("placeholder", currentUser.displayName);
+        reportID = getQueryVariable('report');
+        readReports(currentUser.uid, reportID);
+      }else{
+        window.location.href="/login";
+      }
+    });
+
+
+
+  </script>
+</head>
+<body>
+  <div class="pre-load uk-inline uk-animation-reverse">
+    <div class="uk-position-center uk-overlay">
+      <img class="floating uk-align-center" style="width:100px;" src="./images/logo.png">
+      <progress id="js-loading" class="uk-progress" value="10" max="100"></progress>
+      <h4 class="uk-h4">Welcome to Terrifio&trade;!</h4>
+      <p id="loadingInfo">Loading Please Wait...</p>
+    </div>
+  </div>
+  <main class="uk-hidden">
+    <!--HEADER-->
+    <header id="top-head" class="uk-position-fixed">
+      <div style="min-height:50px;" class="uk-container uk-container-expand uk-background-primary">
+        <nav class="uk-navbar uk-light" data-uk-navbar="mode:click; duration: 250">
+          <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-hidden@m">
+              <a class="uk-logo" href="/"><img class="custom-logo" src="./images/logo.png" alt=""></a> 
+            </div>
+            <ul class="uk-navbar-nav uk-visible@m">
+              <li>
+                <a href="#">Settings <span data-uk-icon="icon: triangle-down"></span></a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-nav-header">Your Account</li>
+                    <!-- <li><a href="#"><span data-uk-icon="icon: info"></span> Summary</a></li> -->
+                    <li><a href="/account"><span data-uk-icon="icon: settings"></span> Settings</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="/user"><span data-uk-icon="icon: image"></span> Your Profile</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a onClick="firebase.auth().signOut();"><span data-uk-icon="icon: sign-out"></span> Logout</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+<!--             <div class="uk-navbar-item">
+              <a href="/digitalipadvisor"><button  class="uk-button uk-button-default">
+                New Project
+              </button></a>
+            </div> -->
+            <div class="uk-navbar-item uk-visible@s">
+              <!-- <form class="uk-search uk-search-default">
+                <span data-uk-search-icon></span>
+                <input class="uk-search-input search-field" type="search" placeholder="Search">
+              </digitalipadvisor> -->
+            </div>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li class="uk-visible@m"><a href="/user" data-uk-icon="icon:user" title="Your profile" data-uk-tooltip></a></li>
+              <li class="uk-visible@m"><a href="/account" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
+              <li class="uk-visible@m"><a onClick="logout();" data-uk-icon="icon:  sign-out" title="Sign Out" data-uk-tooltip></a></li>
+              <li><a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #left-col; cls: uk-visible@m" data-uk-navbar-toggle-icon title="Menu" data-uk-tooltip></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--/HEADER-->
+    <!-- LEFT BAR -->
+    <aside id="left-col" class="uk-light uk-visible@m">
+      <div class="left-logo uk-align-center uk-flex uk-flex-middle">
+        <a href="/"><img class="custom-logo" src="./images/logo.png" alt=""></a>
+        <h4 class="uk-h4" style="padding-bottom: 15px;">Terrifio &trade;</h4>
+      </div>
+      <div class="left-content-box  content-box-dark">
+        <a href="/user">
+          <img src="" alt="" class="uk-border-circle profile-img">
+        </a>
+        
+        <h4 class="uk-text-center uk-margin-remove-vertical text-light"></h4>
+        
+        <div class="uk-position-relative uk-text-center uk-display-block">
+          <a href="#" class="uk-text-small uk-text-muted user-name uk-display-block uk-text-center" data-uk-icon="icon: triangle-down; ratio: 0.7">User</a>
+          <!-- user dropdown -->
+          <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+            <ul class="uk-nav uk-dropdown-nav uk-text-left">
+              <li><a href="/account"><span data-uk-icon="icon: settings"></span> Settings</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="/user"><span data-uk-icon="icon: image"></span> Your Profile</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a onClick="firebase.auth().signOut();"><span data-uk-icon="icon: sign-out"></span> Logout</a></li>
+            </ul>
+          </div>
+          <!-- /user dropdown -->
+        </div>
+      </div>
+      
+      <div class="left-nav-wrap">
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+          <li class="uk-nav-header">ACTIONS</li>
+          <li><a href="/"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Dashboard</a></li>
+          <li><a href="/calculator"><span data-uk-icon="icon: credit-card" class="uk-margin-small-right"></span>Cost Forecaster</a></li>
+<!--           <li><a class="uk-disabled" title="Coming Soon" href="#"><span data-uk-icon="icon: calendar" class="uk-margin-small-right"></span>Calendar</a>
+          
+          </li> -->
+<!--          
+          <li><a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Featured Content</a></li>
+          <li><a href="#"><span data-uk-icon="icon: lifesaver" class="uk-margin-small-right"></span>Tips</a></li> -->
+          <li class="uk-parent">
+            <a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>Info</a>
+            <ul class="uk-nav-sub">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="left-content-box uk-margin-top">
+        </div>
+        
+      </div>
+      <div class="bar-bottom">
+        <ul class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5" data-uk-grid>
+          <li>
+            <a href="/" class="uk-icon-link" data-uk-icon="icon: home" title="Home" data-uk-tooltip></a>
+          </li>
+          <li>
+            <a href="/account" class="uk-icon-link" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a>
+          </li>
+          <!-- <li>
+            <a href="#" class="uk-icon-link" data-uk-icon="icon: social"  title="Social" data-uk-tooltip></a>
+          </li> -->
+          
+          <li>
+            <a onClick="firebase.auth().signOut();" class="uk-icon-link" data-uk-tooltip="Sign out" data-uk-icon="icon: sign-out"></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- /LEFT BAR -->
+    <script type="text/javascript">
+     function deleteReport(reportSuffix, reportPrefix, formName){
+      var reportID = String(reportPrefix) + String(reportSuffix);
+      console.log(reportPrefix)
+      if(confirm('Are you sure you wish to delete '+ formName + '?') == true){
+       var parent = database.ref('user/' + currentUser.uid +'/'+reportID);
+       parent.on('child_removed', function (snapshot) {
+        console.log(snapshot);
+      })
+       parent.remove();
+     } 
+
+
+
+
+   }
+ </script>
+ <link href="./datedropper/datedropper.css" rel="stylesheet" type="text/css" />
+ <script src="./datedropper/datedropper.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="./css/datepicker.css">
+
+ <script type="text/javascript">
+jQuery(document).ready(function(){
+
+    firebase.auth().onAuthStateChanged(function(user) {
+    if(user){
+      if (typeof user.uid !== 'undefined' && user.uid != null ) {
+    readReports(user.uid, reportID);
+    // readCampaigns();
+    
+    
+  }
+    }
+  
+});
+  var storage = firebase.storage();
+  var pathReference = storage.ref("templates");
+  
+});
+
+var tempRef;
+var reportData;
+var reportUid;
+var userUid;
+var futureDate;
+//});
+
+function getQueryVariable(variable)
+{
+ var query = window.location.search.substring(1);
+ var vars = query.split("&");
+ for (var i=0;i<vars.length;i++) {
+   var pair = vars[i].split("=");
+   if(pair[0] == variable){return pair[1];}
+ }
+ return(false);
+}
+
+
+function readReports(userID,reportID){
+  reportUid = reportID;
+  userUid = userUid;
+
+  console.log(reportID)
+  if(reportID != ''){
+    firebase.database().ref('user/' + userID + '/reports/' + reportID ).once('value').then(function(snapshot) {
+     reportData = snapshot.val(); 
+     jQuery('#typeReport').text(reportData.whatkind);
+     console.log(reportData);
+     jQuery('#submissionID').attr('value',reportID);
+     var disclose;
+  var comm;
+  var timeObject;
+
+  if(typeof reportData.less !== 'undefined' || typeof reportData.lessComm !== 'undefined'){
+    if(typeof reportData.less !== 'undefined' && typeof reportData.lessComm !== 'undefined'){
+      disclose = new moment(reportData.less);
+      comm = new moment(reportData.lessComm);
+      if (disclose.isAfter(reportData.comm)){
+        //Set countdown on a year after comm
+        timeObject = new moment(comm);
+      }else if (disclose.isBefore(reportData.comm)){
+        //Set countdown on a year after disclose
+       timeObject = new moment(disclose);
+      }
+    }else if (typeof reportData.less !== 'undefined' && typeof reportData.lessComm === 'undefined'){
+      //Set countdown on a year after disclose
+      disclose = new moment(reportData.less);
+      timeObject = new moment(disclose);
+    }else if (typeof reportData.lessComm !== 'undefined' && typeof reportData.less === 'undefined'){
+      //Set countdown on a year after comm
+      comm =new moment(reportData.lessComm); 
+      timeObject =new  moment(comm);
+    }
+  }
+  
+   futureDate = new moment(timeObject)
+  futureDate = futureDate.add(1, 'year')
+
+
+
+   });
+  }else{
+
+
+
+  }
+
+
+  
+}
+
+  function daysRemaining(event) {
+    var eventdate = event;
+    var todaysdate = moment();
+
+    return eventdate.diff(todaysdate);
+}
+
+function showVal(ref,val){
+  console.log(ref);
+  if (ref == 'complex'){
+    switch(true){
+      case val <= 2:
+      console.log('0');
+      jQuery('#complexNote').text('Simple');
+      break;
+      case val > 2 && val <= 5:
+      console.log('1');
+      jQuery('#complexNote').text('Somewhat Simple');
+      break;
+      case val > 5 && val <= 8:
+      console.log('2');
+      jQuery('#complexNote').text('Involved');
+      break;
+      case val > 8 && val <= 11:
+      jQuery('#complexNote').text('Intricate');
+      break;
+      case val > 11 && val <= 14:
+      jQuery('#complexNote').text('Advanced');
+      break;
+    }
+  }else if(ref == 'budget'){
+   switch(true){
+    case val <= 2:
+    console.log('0');
+    jQuery('#budgetNote').text('$1000 - $2000');
+    break;
+    case val > 2 && val <= 5:
+    console.log('1');
+    jQuery('#budgetNote').text('$2500 - $5000');
+    break;
+    case val > 5 && val <= 8:
+    console.log('2');
+    jQuery('#budgetNote').text('$5500 - $10,000');
+    break;
+    case val > 8 && val <= 11:
+    jQuery('#budgetNote').text('$10,000 - $15,000');
+    break;
+    case val > 11 && val <= 14:
+    jQuery('#budgetNote').text('$15,000 +');
+    break;
+  }
+}
+return false;
+}
+
+jQuery(function(){ 
+
+
+  jQuery('.datePicker').dateDropper();
+  jQuery('input[name="inwhich"]').click(function(){
+    console.log(jQuery('.uk-radio[name="inwhich"]:checked').val())
+    if(jQuery('.uk-radio[name="inwhich"]:checked').val() == "Other"){
+      jQuery("#extraCountry").show();
+      jQuery( "#extraCountry > select" ).change(function () {
+        var str = "";
+        jQuery( "#extraCountry > select > option:selected" ).each(function() {
+          str += $( this ).val();
+          console.log(str)
+        });
+        jQuery( "#otherCountry" ).val( str );
+      }).change();
+    }
+    else{
+      jQuery("#extraCountry").hide();
+      jQuery("#otherCountry").val("Other");
+    }
+  });
+});
+
+function navControl(item){
+  switch(item){
+    case 'showDis':
+    jQuery('#disclosureItem').show();
+    jQuery('#secretNext').attr('uk-switcher-item','next');
+    jQuery('#tab_6_prev').attr('uk-switcher-item', 'previous')
+    break;
+    case 'hideDis':
+    jQuery('#secretNext').attr('uk-switcher-item','6');
+    jQuery('#disclosureItem').hide();
+    jQuery('#tab_6_prev').attr('uk-switcher-item', '4')
+    break;
+    default:
+    break;
+  }
+};
+
+function disableInput(state){
+  if(state == false){
+    jQuery('#datePicker').show(); 
+    jQuery('#less').removeAttr('disabled'); 
+    jQuery('#lessValid').removeAttr('disabled');
+  }
+  else{
+    jQuery('#datePicker').hide(); 
+    jQuery('#less').prop('disabled', true); 
+    jQuery('#lessValid').prop('disabled', true);
+  }
+}
+
+var i = 1;
+function validate(tab){
+  console.log('ran validation');
+  switch(tab){
+    case 'tab0':
+    if(typeof reportData === 'undefined'){
+      jQuery('#switcher-nav > li:nth-child(1)').addClass('uk-active');
+      jQuery('#switcher-nav > li:nth-child(2)').removeClass('uk-active');
+      return false
+      jQuery()
+    }else{
+      jQuery('#country').text(reportData.inwhich);
+      if(reportData.inwhich == "United States"){
+        jQuery('#postal').attr('placeholder','Your Zip Code');
+      }else{
+        jQuery('#postal').attr('placeholder','Your Postal Code');
+      }
+      return true;
+    }
+    
+    break;
+    case 'tab1':
+    if(jQuery('#postal').val() == null || jQuery('#postal').val() == ''){
+     jQuery('#postal').addClass('uk-form-danger');
+     jQuery('#postal').removeClass('uk-form-success');
+     jQuery('#postalError').show();
+     jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+     jQuery('#switcher-nav li:nth-child(2)').addClass('uk-active');
+
+                    // jQuery(el).attr('uk-switcher-item', '');
+                    // jQuery(el).addClass('uk-disabled');
+                   // console.log('validation incorrect');
+                   return false;
+
+
+                 }else{
+                  var postalLength =jQuery('#postal').val();
+                  postalLength = postalLength.length;
+                  if(reportData.inwhich == 'United States'){
+                    if(postalLength == 5){
+                      jQuery('#postal').addClass('uk-form-success');
+                      jQuery('#postal').removeClass('uk-form-danger');
+                      jQuery('#postalError').hide();
+
+                      return true 
+                    }else{
+                      jQuery('#postal').addClass('uk-form-danger');
+                      jQuery('#postal').removeClass('uk-form-success');
+                      jQuery('#postalError').show();
+                      jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+                      jQuery('#switcher-nav li:nth-child(2)').addClass('uk-active');
+
+                      return false
+                    }
+                  }else if(reportData.inwhich == 'United Kingdom'){
+                    if(postalLength == 7){
+                      jQuery('#postal').addClass('uk-form-success');
+                      jQuery('#postal').removeClass('uk-form-danger');
+                      jQuery('#postalError').hide();
+
+                      return true 
+                    }else{
+                      jQuery('#postal').addClass('uk-form-danger');
+                      jQuery('#postal').removeClass('uk-form-success');
+                      jQuery('#postalError').show();
+                      jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+                      jQuery('#switcher-nav li:nth-child(2)').addClass('uk-active');
+
+                      return false
+                    }
+
+                  }else if(reportData.inwhich == 'Canada'){
+                    if(postalLength == 6){
+                      jQuery('#postal').addClass('uk-form-success');
+                      jQuery('#postal').removeClass('uk-form-danger');
+                      jQuery('#postalError').hide();
+
+                      return true 
+                    }else{
+                      jQuery('#postal').addClass('uk-form-danger');
+                      jQuery('#postal').removeClass('uk-form-success');
+                      jQuery('#postalError').show();
+                      jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+                      jQuery('#switcher-nav li:nth-child(2)').addClass('uk-active');
+
+                      return false
+                    }
+                  }else if (reportData.inwhich == 'Austalia'){
+                    if(postalLength == 4){
+                      jQuery('#postal').addClass('uk-form-success');
+                      jQuery('#postal').removeClass('uk-form-danger');
+                      jQuery('#postalError').hide();
+
+                      return true 
+                    }else{
+                      jQuery('#postal').addClass('uk-form-danger');
+                      jQuery('#postal').removeClass('uk-form-success');
+                      jQuery('#postalError').show();
+                      jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+                      jQuery('#switcher-nav li:nth-child(2)').addClass('uk-active');
+
+                      return false
+                    }
+                  }else{
+                    if(postalLength >= 2){
+                      jQuery('#postal').addClass('uk-form-success');
+                      jQuery('#postal').removeClass('uk-form-danger');
+                      jQuery('#postalError').hide();
+
+                      return true 
+                    }else{
+                      jQuery('#postal').addClass('uk-form-danger');
+                      jQuery('#postal').removeClass('uk-form-success');
+                      jQuery('#postalError').show();
+                      jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+                      jQuery('#switcher-nav li:nth-child(2)').addClass('uk-active');
+
+                      return false
+                    }
+                  }
+                }
+                break;
+                case 'tab2':
+                // if(jQuery('.uk-radio[name="whatkind"]:checked').val() == null || jQuery('.uk-radio[name="whatkind"]:checked').val() == ''){
+                //  jQuery('#switcher-nav .uk-active').removeClass('uk-active');
+                //  jQuery('#switcher-nav li:nth-child(3)').addClass('uk-active');
+
+                //  jQuery('#type h4').removeClass('uk-hidden');
+                //     // jQuery(el).attr('uk-switcher-item', '');
+                //     // jQuery(el).addClass('uk-disabled');
+                //     console.log('validation incorrect');
+                //     return false;
+
+
+                //   }else{
+                //     //console.log(jQuery('.uk-radio[name="whatkind"]').val());
+                //     jQuery('#type h4').addClass('uk-hidden');
+                
+                //     // jQuery(el).attr('uk-switcher-item', 'next');
+                //     // jQuery(el).removeClass('uk-disabled');
+                //     if(jQuery('.uk-radio[name="whatkind"]:checked').val() == 'Combo'){
+                //      jQuery('typeCheckNav').removeClass('uk-hidden');
+                //      jQuery('typeCheck').removeClass('uk-hidden');
+                //      i=i+1;
+                //     }else{
+
+                //      if(i == 2){
+                //        i = 1;
+                //        jQuery('typeCheckNav').addClass('uk-hidden');
+                //        jQuery('typeCheck').addClass('uk-hidden');
+                //      }
+                //     }
+                //     console.log('Validation correct');
+                //     return true;
+                //   }
+                return true;
+                break;
+
+                case 'tab3':
+                return true;
+                break;
+                case 'tab4':
+                return true; 
+                break;
+
+                case 'tab5':
+                return true;
+                break;
+
+                default: 
+                return false;
+                break;
+              }
+
+
+            }
+            function submit() {
+              var formdata = $("form").serializeArray();
+              var data = {};
+              $(formdata).each(function(index, obj){
+                data[obj.name] = obj.value;
+              });
+              data['status'] = 'init';
+              data['unread'] = 'true';
+
+              writeUserData(data,currentUser.uid, reportID);
+            }
+
+            function writeUserData(data, userID, reportID){
+              firebase.database().ref('user/' + userID + "/reports/" + reportID + '/proSearch').update(data,function(error){
+                if(error){
+                  console.log(error);
+                }
+                else{
+                }
+              }).then(function(snapshot){
+                if(typeof userDataObject.userMeta.campaign !== 'undefined'){
+                  firebase.database().ref('/leadGen/' + userDataObject.userMeta.campaign + '/accounts/' + userDataObject.userMeta.campaignPushId + '/reports/' + reportID + 'proSearch').update(data);
+                }
+                window.location.href = '/report?report='+reportID;
+              });
+            }
+          </script>
+          <!-- CONTENT -->
+          <div id="content" class="uk-background-cover uk-overlay uk-overlay-cover uk-overlay-default " style="background-image: url('./images/background.jpg')" data-uk-height-viewport="expand: true">
+            <div class="uk-container uk-container-expand">
+              <hr>
+              <div class="uk-grid uk-grid-medium" data-uk-grid>
+
+                <!-- panel -->
+                <div class="uk-width-2-3@l uk-align-center">
+                  <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+                    <div class="uk-card-header">
+                      <div class="uk-grid uk-grid-small">
+                        <div class="uk-width-auto"><h4>Professional Search Criteria</h4></div>
+                        <div class="uk-width-expand uk-text-right panel-icons">
+                    <!-- <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
+                      <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a> -->
+                      <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: cross"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-card-body">
+                 <form id="proForm" action="javascript:submit();" method="post">
+                  <ul id="switcher-nav" class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium; swiping: false;">
+                   <li style="pointer-events: none;"><a  href="#" >Welcome</a></li>
+                   <li style="pointer-events: none;" onClick="return false;"><a class="" href="#" >Region</a></li>
+                   <li style="pointer-events: none;" class="" ><a  href="#" >Category</a></li>
+                   <!--  <li class="uk-hidden" id="typeCheckNav"><a href="#">Combine Types</a></li> -->
+                   <li style="pointer-events: none;" onClick="return false;"><a  href="#" >Complexity</a></li>
+                   <li style="pointer-events: none;" onClick="return false;"><a  href="#" >Budget Range</a></li>
+                   <li style="pointer-events: none;"><a href="#" >Submit</a></li>
+                 </ul>
+                 <ul id="switcher" class="uk-switcher uk-margin">
+
+                   <li> 
+                    <p class="uk-center">
+                     You and a prospective IP Professional will look for a “match”. You may be looking for experience and
+                     trust. IP Professionals may choose clients that can understand the risks, costs and uncertainty with
+                     the process of seeking IP rights.
+                   </p> 
+                   <input id="submissionID" type="hidden" name="submission_id">
+                   <button class="uk-button uk-button-primary uk-align-center" href="#" onClick="$('.uk-switcher').on('beforehide', function(e) { return validate('tab0');});" uk-switcher-item="next">Proceed</button> 
+
+
+                 </li>
+                    <!-- <li>
+                        <p>
+                            By clicking "I Agree" below, you acknowledge that  i) you have read our Terms and Conditions (at  https://network.canipy.io/terms/)  and that ii) the following questions are not intended to replace professional advice, but rather to provide you with selected general information to help you determine key initial steps and milestones in order to preserve your rights.
+                        </p>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-primary " href="#" uk-switcher-item="previous">Previous</button>
+                            <button class="uk-button uk-button-primary uk-align-right uk-disable"  href="#" uk-switcher-item="next">I Agree</button>
+                        </div>
+
+                      </li> -->
+                      <li id='tab1'class="">
+                       <fieldset class="uk-fieldset">
+                        <div class="uk-margin">
+                          <h4 id="postalError" style="display:none;" class="uk-danger">Incorrect Postal Code Format</h4>
+
+                          <p>You selected <u><span id="country"></span></u>  as your country, so add your Zip/Postal Code of where you work or live, and we’ll add this to the
+                            Project Criteria. Then click “next.”
+                            IP Professionals are specialists, and the one with the right match may not be in your area. (Clients and their IP
+                          Professionals may only meet once a year.)</p>
+                          <input class="uk-input" name="location" id="postal" type="text">
+                        </div>
+                      </fieldset>  
+                      <button class="uk-button uk-button-primary " href="#" uk-switcher-item="previous">Previous</button>
+                      <button class="uk-button uk-button-primary uk-align-right" href="#" onClick="$('.uk-switcher').on('beforehide', function(e) { return validate('tab1');});" uk-switcher-item="next">Next</button></li>
+                      <!-- <button class="uk-button uk-button-primary uk-align-right" href="#" uk-switcher-item="next">Next</button> --></li>
+                      <li id="type">
+                        <fieldset class="uk-fieldset">
+                          <h4 class="">You selected <span id="typeReport"></span> as the "type" associated with your project.</h4>
+                          <p>Sometimes a Project be more than one type.
+                            An IMPROVED COFFEE MAKING PROCESS might involve a new electrical control system with novel features.
+                            However, it might also have:
+                            <ul>
+                              <li> an important ingredient in a new coffee “composition” (type = Chemical), (for example freeze dried broccoli)
+                              to allow the new coffee composition to respond to the new temperature control system; and</li>
+                              <li>a new supply “structure” and/or “method” (type = Mechanical”) to direct the water into the coffee
+                              “composition” .</li>
+                            </ul>
+                            A prospective IP Professional would consider this Project, according to three “types” in the Project Criteria. 
+                            <br/>
+                            Click other types that may apply to your Project. When you’re ready, click “next.”
+                          </p>
+                          <div class="uk-margin uk-grid-medium uk-child-width-auto uk-grid">
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="Mechanical" name="whatkind"> Mechanical</label>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="Electrical" name="whatkind"> Electrical</label>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="Software" name="whatkind"> Software</label>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="Chemical" name="whatkind"> Chemical</label>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="Other" name="whatkind"> Other</label>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="Combo" name="whatkind"> A Combination of the above types</label>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                              <label><input class="uk-checkbox" type="checkbox" value="I'm not sure" name="whatkind"> I'm not sure</label>
+                            </div>
+                          </div>
+                          <div class="uk-margin">
+                            <button class="uk-button uk-button-primary " href="#" uk-switcher-item="previous">Previous</button>
+                            <button class="uk-button uk-button-primary uk-align-right" onClick="$('.uk-switcher').on('beforehide', function(e) { return validate('tab2');});"  href="#" uk-switcher-item="next">Next</button>
+                          </div>
+                        </li>
+<!--                         <li id="typeCheck" class="uk-hidden">
+                            <h4 class="uk-form-danger uk-hidden">Please select a type option.</h4>
+                            <div class="uk-margin uk-grid-medium uk-child-width-auto uk-grid">
+                                <div class="uk-width-1-2@m">
+                                    <label><input class="uk-checkbox" type="checkbox" value="Mechanical" name="whatkind"> Mechanical</label>
+                                </div>
+                                <div class="uk-width-1-2@m">
+                                    <label><input class="uk-checkbox" type="checkbox" value="Electrical" name="whatkind"> Electrical</label>
+                                </div>
+                                <div class="uk-width-1-2@m">
+                                    <label><input class="uk-checkbox" type="checkbox" value="Software" name="whatkind"> Software</label>
+                                </div>
+                                <div class="uk-width-1-2@m">
+                                    <label><input class="uk-checkbox" type="checkbox" value="Chemical" name="whatkind"> Chemical</label>
+                                </div>
+                                <div class="uk-width-1-2@m">
+                                    <label><input class="uk-checkbox" type="checkbox" value="Other" name="whatkind"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-primary " href="#" uk-switcher-item="previous">Previous</button>
+                            <button class="uk-button uk-button-primary uk-align-right" onClick="$('.uk-switcher').on('beforehide', function(e) { return validate('tab2');});"  href="#" uk-switcher-item="next">Next</button>
+                        </div>
+
+                      </li> -->
+                      <li id="complex">
+                       <fieldset class="uk-fieldset">
+                        <h4 id="complexNote" class="uk-form-success uk-heading-bullet">Simple</h4>
+                        <!-- <p>Simple: My invention has just a few parts or design elements.</p>
+                        <p>Somewhat simple: The design has more than a few
+                          <p>Involved:The design requires many parts or design elements.</p><p>Intricate: The design requires many parts or design elements that interact in complex processes or systems.</p>
+                          <p>Advanced: The design is made up of vearious larger systems requiring many parts or design elements that interact in complex processes or systems </p>
+                          <p>How complex is your project? When thinking about complexity factor in:</p>
+                          <ul>
+                            <li>The amount of parts / elements in the design</li>
+                            <li>Steps required to implement your design or concept</li>
+                            <li>The amount of domain knowledge required</li>
+                          </ul> -->
+                          <p>How complex is your project? 
+                            <br/>
+                          You might factor in such things as:</p>
+                          <ul>
+                           <li> -The number of versions (or "embodiments")</li>
+                           <li>-The number of segments/features/steps/modes for each version</li>
+                           <li>-The steps required to implement each version</li>
+                           <li>-The level of domain knowledge needed to understand itAdjust the sliders below to indicate the complexity of your Project.</li>
+                         </ul>
+                         <div class="uk-margin">
+                          <input class="uk-range" name="complexity" type="range" value="0" min="0" max="14" step="1" oninput="showVal('complex', this.value)" onchange="showVal('complex',this.value)">
+
+                        </div>
+                      </fieldset>
+                      <div class="uk-margin">
+                        <button class="uk-button uk-button-primary  " href="#" uk-switcher-item="previous">Previous</button>
+                        <button class="uk-button uk-button-primary uk-align-right" onClick="$('.uk-switcher').on('beforehide', function(e) { return validate('tab3');});"  href="#" uk-switcher-item="next">Next</button>
+                      </div>
+                      <li id="secret">
+                        <fieldset class="uk-fieldset">
+                         <h4 id="budgetNote"class="uk-form-Success">$1000 - $2000</h4>
+                         <p>What is your budget to begin the application process? This would include:</p>
+                         <ul>
+                          <li>Costs related to patent searches</li>
+                          <li>Costs related to initial drafts and application fees</li>
+                          <li>Costs for the professionals time and expertise</li>
+                        </ul>
+                        <p>Note: These costs are only for beginning the patent process, after you begin the process more fees may be incurred depending on the nature of your project.</p>
+                        <div class="uk-margin">
+                          <input class="uk-range" name="budget" type="range" value="0" min="0" max="14" step="1" oninput="showVal('budget',this.value)" onchange="showVal('budget',this.value)">
+                        </div>
+                       <!-- <p> ﻿ Is your Invention SECRET? (YES means you have NOT disclosed your invention in any "enabling activity" that would make it available to the public (Examples: web page description, demo at a shopping mall) . "Enabling" means that your activity reveals enough of the "secret sauce" of your invention to enable an "unimaginative person of skill in the trade" to figure it out and reproduce it.</p>
+                       <div class="uk-button-group uk-width-1-1@m" data-uk-button-radio>
+                        <label style="margin-right:5px;" class="uk-button uk-button-primary uk-width-1-2@m">
+                         <input onClick="navControl('hideDis');" class="uk-radio" type="radio" name="isyour" value="yes" style=""/>
+                         Yes
+                       </label>
+                       <label  class="uk-button uk-button-primary uk-width-1-2@m">
+                         <input onClick="navControl('showDis');" class="uk-radio" type="radio" name="isyour" value="no" style=""/>
+                         No
+                       </label>
+                     </div> -->
+                   </fieldset>
+                   <div class="uk-margin">
+                     <button class="uk-button uk-button-primary  " href="#" uk-switcher-item="previous">Previous</button>
+                     <button id="secretNext" class="uk-button uk-button-primary uk-align-right" href="#" onClick="$('.uk-switcher').on('beforehide', function(e) { return validate('tab4');});" uk-switcher-item="next">Next</button>
+                   </div>
+                 </li>
+
+                 <li class="">
+                  <fieldset class="uk-fieldset">
+                    <p>
+                    <!--
+                    Ok. Great!
+                     <br/>
+                    The next step is to find an IP Professional. We can check with our roster of IP Professionals to see if any are able to consider your Project.
+                    <br/>
+                    We note that your Project has a deadline of: <span id="deadline"></span>
+
+                    <br/>
+                    Click the "submit" button and we'll add your answers to the Project Criteria which you will see in a seperate tab at the top of the Report.
+                  </p> -->
+                  OK. Great! Click on the “Submit” button so that we can add your details to your Project.
+                  <br>
+                    <!-- <p>If you have any firms you would be interested in working with please enter them bellow:</p>
+                      <textarea class="uk-textarea" placeholder="Enter firm names seperated by a ','" name="suggestFirm"></textarea> -->
+
+                    </fieldset>
+                    <div class="uk-margin">
+                     <button id="tab_6_prev" class="uk-button uk-button-primary " href="#" uk-switcher-item="previous">Previous</button>
+                     <input type="submit" id="submitButton" style="-webkit-appearance: none;" class="uk-button uk-button-primary uk-align-right"></input>
+                   </div>
+                 </li>
+               </ul>
+
+             </form>
+           </div>
+
+         </div>
+       </div>
+       <!-- /panel -->
+       <div class="uk-width-2-3@l uk-hidden uk-align-center">
+        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+          <div class="uk-card-header">
+            <div class="uk-grid uk-grid-small">
+              <div class="uk-width-auto"><h4>How do I find an IP Professional?</h4></div>
+              <div class="uk-width-expand uk-text-right panel-icons">
+                    <!-- <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
+                      <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a> -->
+                      <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: cross"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-card-body">
+
+                 <p>
+                  So, you’ve reviewed your Terrifio™ Digital IP Adivsor Report and now you’re ready
+                  to contact an IP Professional.
+                </p>
+                <p>
+                  We suggest the following.
+                </p>
+                <p>
+                  First, you should have an idea in your mind of a budget you can work with.
+                  You need to align what you can afford with a budget that your IP
+                  Professional can work within to carry out the needed mandate(s).
+                </p>
+                <p>
+                  An IP Professional will need to check for conflicts and will ask for
+                  general information in order to do so, including:
+                </p>
+                <ol type="a">
+                  <li>  <p>
+                    a general description of your project <i>(the name of your Project may be a good first step);</i>
+                  </p></li>
+                  <li><p>
+                    your name and the names of your collaborators <i>(if any)</i>; and
+                  </p></li>
+                  <li><p>
+                    the name of any parties that may be adverse to you  <i>(this could include known competitors for you, for example)</i>.
+                  </p></li>
+                </ol>
+
+
+
+                <p>
+                  Once your IP Professional “clears conflicts”, you may need to sign an
+                  Engagement Letter, which will lay out your obligations to settle accounts.
+                </p>
+                <p>
+                  At this point you’ll be ready to discuss and verify your Project details
+                  with your IP Professional, including your Terrifio™ Digital IP Advisor
+                  Report.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-sections" uk-modal="bg-close:false; ">
+ <div class="uk-modal-dialog">
+  <button class="uk-modal-close-default" type="button" uk-close></button>
+  <div class="uk-modal-header">
+   <h2 class="uk-modal-title">Welcome To Terrifio&trade;!</h2>
+ </div>
+ <div class="uk-modal-body">
+  <ul class="intro uk-text-center uk-switcher uk-align-center">
+    <li><img src="./images/advisor-intro.png" style="width:350px"></li>
+    <li><img src="./images/report-intro.png" style="width:350px"></li>
+    <li><img src="./images/pro-intro.png" style="width:350px"></li>
+  </ul>
+  <ul uk-switcher="connect: .intro" style="margin-left: auto; margin-right: 50%; float: right;" class="uk-text-center uk-dotnav">
+    <li><a href="#">info1</a></li>
+    <li><a href="#">info2</a></li>
+    <li><a href="#">info3</a></li>
+  </ul>
+            <!-- <p>It is important that you, as the innovator or person privy to innovative information remain vauge then entering information online.</p>
+            <strong>Information you enter here is not priviledged and could be used in a legal context.</strong>
+            <ul>
+              <li>Protect your information by not providing all information</li>
+              <li>Protect your information by only disclosing it to trusted others and legal regresentatives</li>
+              <li>You enter information at your own risk</li>
+            </ul> -->
+            <ul class="uk-switcher intro" style="padding-top:20px;">
+              <li><p>Welcome to Terrifio&trade; You have mentioned that you taken an activity that could effect your patent rights. Please contact an Intellectual Property Professional soon to preserve your rights. </p>
+                <a href="/digitalipadvisor"><button class="uk-align-center uk-text-center uk-button uk-button-primary">New Project</button></a>
+              </li>
+              <li>
+                <p>Once you have filled out a new project we build a customised IP report for you, to help you understand your rights, options, and general IP information.</p>
+              </li>
+              <li>
+                <p>After, you can fill out our Professional search from. We attach it to a report, and provide you with resources to find an IP Professional that best suites your needs.</p>
+              </li>
+            </ul>
+
+
+          </div>
+          <div class="uk-modal-footer uk-text-right">
+            <ul class="uk-switcher intro">
+              <li><button  class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+                <button class="uk-button uk-button-primary" uk-switcher-item="next" type="button">Next</button>
+              </li>
+              <li> <button  class="uk-button uk-button-default" uk-switcher-item="previous" type="button">previous</button>
+                <button class="uk-button uk-button-primary" uk-switcher-item="next" type="button">Next</button>
+              </li>
+              <li><button  class="uk-button uk-button-default" uk-switcher-item="previous" type="button">previous</button>
+                <button class="uk-button uk-button-primary uk-modal-close"  type="button">Ok, Got it</button>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+  <div id="footer" class="uk-section uk-section-xsmall" style="background-color: rgba(0,0,0,0.15)">
+    <div class="uk-container">
+      <div class="uk-grid uk-child-width-1-2@s uk-text-center uk-grid-stack" data-uk-grid="">
+        <div class="uk-text-small uk-text-muted uk-first-column uk-align-center">
+          <a href="https://terrifio.co.uk">Copyright 2019 Terrifio &trade; All Rights Reserved.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Load More Javascript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js" integrity="sha256-UGwvyUFH6Qqn0PSyQVw4q3vIX0wV1miKTracNJzAWPc=" crossorigin="anonymous"></script> -->
+  <script type="text/javascript">
+
+  </script>
+  <!-- OFFCANVAS -->
+    <!-- <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+      <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+        <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+        
+      </div>
+    </div> -->
+    <!-- /OFFCANVAS -->
+    
+    <!-- JS FILES -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!--    <script src="./js/chartScripts.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js" integrity="sha256-rqEXy4JTnKZom8mLVQpvni3QHbynfjPmPxQVsPZgmJY=" crossorigin="anonymous"></script>
+    <script src="./js/notyf.min.js"></script>
+    <script src="moment.min.js"></script>
+<script src="countdown.min.js"></script>
+<script src="moment-countdown.min.js"></script>
+    <!-- Required Overall Script -->
+<!-- <script src="./js/script.js"></script>
+
+-->
+<script type="text/javascript">
+
+
+
+</script>
+
+<!-- Status Updater -->
+<script src="./js/status.js"></script>
+<!-- Sample Charts -->
+<!-- <script src="./js/charts.js"></script> -->
+<!-- Sample Notifications -->
+<!-- <script src="./js/notification.js"></script> -->
+
+</main>
+</body>
+</html>
